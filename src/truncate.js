@@ -1,4 +1,6 @@
-angular.module('truncate', [])
+var angular = require('angular');
+
+var truncateModule = angular.module('truncate', [])
     .filter('characters', function () {
         return function (input, chars, breakOnWord) {
             if (isNaN(chars)) return input;
@@ -47,3 +49,5 @@ angular.module('truncate', [])
             return input;
         };
     });
+
+module.exports = truncateModule;
